@@ -12,6 +12,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
+import data from '../data/clases.json';
 
 const styles = theme => ({
   toolbar: {
@@ -32,6 +33,7 @@ function DrawerContent(props) {
   const handleClick = () => {
     setOpen(!open);
   };
+  const clasesDelCurso = data.clases;
   
   return (
     <div>
@@ -50,8 +52,9 @@ function DrawerContent(props) {
         </ListItem>
         <Collapse in={open} timeout="auto" unmountOnExit>
           <List className={classes.nested}>
-            <ListItemLink to="/clase/1" primary="Clase 1" icon={<InboxIcon />} />
-            <ListItemLink to="/clase/2" primary="Clase 2" icon={<InboxIcon />} />
+            {clasesDelCurso.map((clase, index) => {
+              return <ListItemLink key={index} to={`/clase/${clase.id}`} primary={`Clase ${clase.id}`} icon={<InboxIcon />} />
+            })}
           </List>
         </Collapse>
         <ListItemLink to="/codigo-de-conducta" primary="Código de conducta" icon={<MailIcon />} />

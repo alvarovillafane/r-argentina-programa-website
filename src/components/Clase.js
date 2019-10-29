@@ -1,44 +1,37 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
+import data from '../data/clases.json';
 
 class Clase extends React.Component {
   state = {
-    isLoading: true,
     clase: null,
     error: null,
+    isLoading: true
   };
   
-  fetchClases() {
-    fetch('../clases.json')
-      .then((res) => res.json())
-      .then((data) => {
-        let clase = data.clases[this.props.match.params.clase-1];
-        if(!clase) { throw new Error(); } 
-
-        this.setState({
-          clase: clase,
-          isLoading: false,
-        });
-      })
-      .catch(error => this.setState({ error, isLoading: false }));
-    }
     
   componentDidMount() {
-    this.fetchClases();
+    try {
+      let clase = data.clases[this.props.match.params.clase - 1];
+      if(!clase) { throw new Error(); } 
+      
+      this.setState({clase: clase, isLoading: false});
+    } catch (error) {
+      this.setState({ error, isLoading: false});
+    } 
   }
   
   render() {
-    const { isLoading, clase, error } = this.state;
+    const {error, clase, isLoading} = this.state;
     if (error) { return <Typography variant="h6">Clase no encontrada</Typography> }
 
-    return !isLoading ? <ClaseUI clase={clase}/> : '';
+    return !isLoading && <ClaseUI clase={clase}/>;
   }
 }
 
-function ClaseUI(props){
-  const { clase } = props;
+function ClaseUI({clase}){
   return (
-    <h1>{clase.titulo}</h1>
+    <Typography variant="h2" component="h1">{clase.titulo}</Typography>
   )
 }
 
