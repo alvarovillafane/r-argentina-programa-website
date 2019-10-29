@@ -10,7 +10,6 @@ function App() {
     <React.Fragment>
       <CssBaseline />
       <div className="container">
-
         <ThemeProvider theme={theme}>
           <Content />
         </ThemeProvider>

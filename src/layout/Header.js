@@ -11,7 +11,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
   appBar: {
-    backgroundColor: '#0c9ae7',
     [theme.breakpoints.up('sm')]: {
       width: '100%',
     },

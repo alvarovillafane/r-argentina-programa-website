@@ -8,6 +8,7 @@ import Header from './Header'
 import DrawerContent from './DrawerContent'
 import Home from '../components/Home'
 import CodigoDeConducta from '../components/CodigoDeConducta'
+import Clase from '../components/Clase'
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import { makeStyles } from '@material-ui/core/styles';
@@ -20,13 +21,14 @@ const useStyles = makeStyles(theme => ({
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {
-      width: drawerWidth,
       flexShrink: 0,
+      width: drawerWidth,
       zIndex: 0
     },
   },
   toolbar: {
     ...theme.mixins.toolbar,
+    padding: '16px',
   },
   drawerPaper: {
     width: drawerWidth,
@@ -81,6 +83,7 @@ function Content(props) {
             <Switch>
               <Route exact path='/' component={Home} />
               <Route path='/codigo-de-conducta' component={CodigoDeConducta} />
+              <Route path="/clase/:clase" render={(props) => (<Clase key={props.match.params.clase} {...props} />)} />
               <Route component={NoMatch} />
             </Switch>
         </main>

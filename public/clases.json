@@ -1,0 +1,15 @@
+{"clases": [
+    {
+        "id": "1",
+        "titulo": "clase 1",
+        "description": "description",
+        "youtube": "http://youtube.com",
+        "twitch": "http://twitch.com"
+    }, {
+        "id": "2",
+        "titulo": "clase 2",
+        "description": "description",
+        "youtube": "http://youtube.com",
+        "twitch": "http://twitch.com"
+    }
+]} 
