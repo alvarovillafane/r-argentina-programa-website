@@ -19,6 +19,7 @@ const styles = theme => ({
   toolbar: {
     ...theme.mixins.toolbar,
     backgroundColor: theme.palette.primary.main,
+    display: 'flex',
   },
   list: {
     padding: '8px',
