@@ -27,8 +27,10 @@ const styles = theme => ({
   nested: {
     paddingLeft: theme.spacing(4),
   },
+  listItemText: {
+    fontSize: '.9rem'
+  },
 });
-
 
 function DrawerContent(props) {
   const { classes } =   props;
@@ -50,7 +52,7 @@ function DrawerContent(props) {
           <ListItemIcon>
             <InboxIcon />
           </ListItemIcon>
-          <ListItemText primary="Curso" />
+          <ListItemText classes={{primary:classes.listItemText}} primary="Curso" />
           {open ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
         <Collapse in={open} timeout="auto" unmountOnExit>

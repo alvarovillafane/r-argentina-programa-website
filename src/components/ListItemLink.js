@@ -2,13 +2,14 @@ import React from 'react';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import { Link as RouterLink } from 'react-router-dom';
+import { NavLink  } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
   listItem: {
-    borderRadius: '4px'
+    borderRadius: '4px',
+    marginBottom: '4px',
   },
   listItemIcon: {
   },
@@ -16,7 +17,10 @@ const useStyles = makeStyles(theme => ({
     fontSize: '.9rem'
   },
   active: {
-    backgroundColor: 'blue',
+    background: 'rgba(12, 154, 231, .08)',
+    '& .MuiListItemText-primary, & svg': {
+      fontWeight: '600',
+    },
   },
 }));
 
@@ -27,14 +31,20 @@ function ListItemLink(props) {
   const renderLink = React.useMemo(
     () =>
       React.forwardRef((itemProps, ref) => (
-        <RouterLink to={to} {...itemProps} innerRef={ref} />
+        <NavLink to={to} {...itemProps} innerRef={ref} />
       )),
     [to],
   );
 
   return (
     <li>
-      <ListItem className={classes.listItem} button component={renderLink} >
+      <ListItem button 
+        component={renderLink} 
+        exact={true} 
+        to={to} 
+        activeClassName={classes.active}
+        className={classes.listItem}
+      >
         {icon ? <ListItemIcon className={classes.listItemIcon}>{icon}</ListItemIcon> : null}
         <ListItemText classes={{primary:classes.listItemText}} primary={primary} />
       </ListItem>
