@@ -1,23 +1,44 @@
 {"clases": [
     {
         "id": "1",
-        "titulo": "clase 1",
+        "titulo": "Clase 1: Introducción a la programación",
         "description": "description",
-        "youtube": "http://youtube.com"
-    }, {
+        "youtube_id": "JkwDaUSivJA"
+    }, 
+    {
         "id": "2",
-        "titulo": "clase 2",
+        "titulo": "Clase 2: Tarea de Clase 1 + Scope + Debugging + IF/ELSE",
         "description": "description",
-        "youtube": "http://youtube.com"
-    }, {
+        "youtube_id": "366HDMfd2-E"
+    }, 
+    {
         "id": "3",
-        "titulo": "clase 3",
+        "titulo": "Clase 3: Finalización de nivel1 + interpolación de strings + tarea",
         "description": "description",
-        "youtube": "http://youtube.com"
-    }, {
+        "youtube_id": "I31mC2TXOxQ"
+    }, 
+    {
         "id": "4",
-        "titulo": "clase 4",
+        "titulo": "Clase 4: Corrección de Tarea 3+ Operadores Lógicos + NaN + Nivel 2 completo",
         "description": "description",
-        "youtube": "http://youtube.com"
+        "youtube_id": "sI_u2Nj84Ls"
+    }, 
+    {
+        "id": "5",
+        "titulo": "Clase 5: Corrección Tarea Clase 4 + Git/GitHub/GitHub Desktop + HTML, CSS, EventListeners",
+        "description": "description",
+        "youtube_id": "52AYl1AAs1o"
+    },
+    {
+        "id": "6",
+        "titulo": "Clase 6: Repaso clase 5, cómo manipular HTML con JS, primer tarea de la clase 5 hecha en vivo.",
+        "description": "description",
+        "youtube_id": "pHDBIy1qUF4"
+    },
+    {
+        "id": "7",
+        "titulo": "Clase 7: Corrección tarea clase 6 e Introducción a validación de formularios + Unit Tests",
+        "description": "description",
+        "youtube_id": "da8Ekd47IOY"
     }
 ]} 
