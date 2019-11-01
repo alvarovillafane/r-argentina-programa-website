@@ -7,9 +7,26 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
 const styles = theme => ({
+  titulo: {
+    marginBottom: theme.spacing(3),
+  },
   youtube: {
-    padding: theme.spacing(3),
     textAlign: 'center'
+  },
+  videoWrapper: {
+	  position: 'relative',
+	  paddingBottom: '56.25%', /* 16:9 */
+	  paddingTop: '25px',
+    height: '0',
+    marginTop: theme.spacing(3),
+	  overflow: 'hidden',
+    '& iframe': {
+      position: 'absolute',
+      top: '0',
+      left: '0',
+      width: '100%',
+      height: '100%',
+    }
   },
 });
 
@@ -19,24 +36,17 @@ class Clase extends React.Component {
     const {match, classes} = this.props;
     const id = match.params.clase - 1;
     let clase = data.clases[id];
-    const opts = {
-      height: '390',
-      width: '640',
-    };
 
-    if(!clase) { return <Typography variant="h6">Clase no encontrada</Typography>; } 
+    if(!clase) { return <Typography component="h1" variant="h6">Clase no encontrada</Typography>; } 
 
     return (
       <React.Fragment>
-        <Typography variant="h2" component="h1">{clase.titulo}</Typography>
-        <Card className={classes.youtube}>
-          <CardContent>
+        <Typography variant="h5" component="h1" className={classes.titulo}>{clase.titulo}</Typography>
+          <div className={classes.videoWrapper}>
             <YouTube
               videoId={clase.youtube_id}
-              opts={opts}
             />
-          </CardContent>
-        </Card>
+          </div>
       </React.Fragment>
     )
   }
