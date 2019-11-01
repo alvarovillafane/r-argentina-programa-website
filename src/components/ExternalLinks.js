@@ -4,6 +4,7 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import RedditIcon from '@material-ui/icons/Reddit';
 import YouTubeIcon from '@material-ui/icons/YouTube';
+import slackData from '../data/slack.json';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
@@ -35,6 +36,7 @@ function TwitchIcon() {
 class ExternalLinks extends React.Component {
   render() {
     const { classes } = this.props;
+    const slackLink = slackData.slack.link;
 
     return (
       <div className={classes.root}>
@@ -77,7 +79,7 @@ class ExternalLinks extends React.Component {
           <IconButton 
             aria-label="slack"
             target="_blank" 
-            href = "https://join.slack.com/t/rargentinaprograma/shared_invite/enQtODAyODIzOTIwNTQ1LTNmNWVkMzcyMjVjZTk4MDk2ZjdjOTQ2MWNhYWFjMzZkNGU5ZTgxMWFmMjk3ZDRkYWUxNWRhZWZlNjI4ZmExZWI"
+            href={slackLink} 
             rel="noopener noreferrer"
             className={classes.appBarButton}
           >
