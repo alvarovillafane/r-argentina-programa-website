@@ -1,10 +1,8 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
 import YouTube from 'react-youtube';
-import data from '../data/clases.json';
+import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
+import data from '../data/clases.json';
 
 const styles = theme => ({
   titulo: {

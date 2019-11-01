@@ -1,21 +1,19 @@
 import React from 'react';
-import ListItemLink from '../components/ListItemLink'
-import ExternalLinks from '../components/ExternalLinks'
 import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
-import { withStyles } from '@material-ui/core/styles';
 import ListItem from '@material-ui/core/ListItem';
+import ListItemLink from '../components/ListItemLink'
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import SchoolOutlinedIcon from '@material-ui/icons/SchoolOutlined';
-import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import ListItemText from '@material-ui/core/ListItemText';
+import ExternalLinks from '../components/ExternalLinks'
 import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
-import data from '../data/clases.json';
+import SchoolOutlinedIcon from '@material-ui/icons/SchoolOutlined';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import SvgIcon from '@material-ui/core/SvgIcon';
-import blue from '@material-ui/core/colors/blue';
-import { bold } from 'ansi-colors';
+import data from '../data/clases.json';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
   toolbar: {
