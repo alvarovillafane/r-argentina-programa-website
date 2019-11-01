@@ -12,6 +12,7 @@ import Clase from '../components/Clase'
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import { makeStyles } from '@material-ui/core/styles';
+import { Typography } from '@material-ui/core';
 
 const drawerWidth = 240;
 
@@ -98,9 +99,7 @@ function Content(props) {
 function NoMatch({ location }) {
   return (
     <div>
-      <h3>
-        No match for <code>{location.pathname}</code>
-      </h3>
+      <Typography variant="h5" component="h1">Oh no! Página no encontrada</Typography>
     </div>
   );
 }
