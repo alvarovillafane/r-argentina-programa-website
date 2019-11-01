@@ -1,9 +1,19 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
+import { withStyles } from '@material-ui/core/styles';
 
-function CodigoDeConducta() {
+const styles = theme => ({
+  root: {
+    color: theme.palette.text.primary,
+  },
+});
+
+function CodigoDeConducta(props) {
+  const { classes } = props;
+
   return (
-    <div>
+    <Container className={classes.root}>
       <Typography variant="h4" component="h1">Código de conducta</Typography>
       <p></p>
       <Typography variant="h5" component="h2">Propósito</Typography>
@@ -105,9 +115,8 @@ function CodigoDeConducta() {
         Está basado en el <a href="https://meetupjs.com.ar/coc.html" target="_blank" rel="nofollow noopener noreferrer">
         Código de Conducta</a> de meetupjs.com.ar, que también es distribuido bajo la misma licencia.
       </p>
-    </div>
+    </Container>
   );
 }
 
-export default CodigoDeConducta;
-
+export default withStyles(styles)(CodigoDeConducta);
