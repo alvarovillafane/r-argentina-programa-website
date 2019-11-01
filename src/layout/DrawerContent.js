@@ -11,6 +11,7 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import SchoolOutlinedIcon from '@material-ui/icons/SchoolOutlined';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import ListAltIcon from '@material-ui/icons/ListAlt';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import data from '../data/clases.json';
 import { withStyles } from '@material-ui/core/styles';
@@ -81,6 +82,12 @@ function DrawerContent(props) {
           primary="Home" 
           onClick={onLinkClick} 
           icon={<HomeOutlinedIcon/>} 
+        />
+        <ListItemLink 
+          to="/overview" 
+          primary="Overview" 
+          onClick={onLinkClick} 
+          icon={<ListAltIcon/>} 
         />
         <ListItem button onClick={handleClick}>
           <ListItemIcon>

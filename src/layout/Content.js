@@ -7,6 +7,7 @@ import {
 import Header from './Header'
 import DrawerContent from './DrawerContent'
 import Home from '../components/Home'
+import Overview from '../components/Overview'
 import CodigoDeConducta from '../components/CodigoDeConducta'
 import Clase from '../components/Clase'
 import Drawer from '@material-ui/core/Drawer';
@@ -86,6 +87,7 @@ function Content(props) {
           <div className={classes.toolbar}/>
             <Switch>
               <Route exact path='/' component={Home} />
+              <Route path='/overview' component={Overview} />
               <Route path='/codigo-de-conducta' component={CodigoDeConducta} />
               <Route path="/clase/:clase" render={(props) => (<Clase key={props.match.params.clase} {...props} />)} />
               <Route component={NoMatch} />
