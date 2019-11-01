@@ -3,8 +3,12 @@ import YouTube from 'react-youtube';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import data from '../data/clases.json';
+import { Container } from '@material-ui/core';
 
 const styles = theme => ({
+  root: {
+     color: theme.palette.text.primary,
+  },
   titulo: {
     marginBottom: theme.spacing(3),
   },
@@ -38,14 +42,12 @@ class Clase extends React.Component {
     if(!clase) { return <Typography component="h1" variant="h6">Clase no encontrada</Typography>; } 
 
     return (
-      <React.Fragment>
-        <Typography variant="h5" component="h1" className={classes.titulo}>{clase.titulo}</Typography>
+      <Container className={classes.root}>
+        <Typography variant="h4" component="h1" className={classes.titulo}>{clase.titulo}</Typography>
           <div className={classes.videoWrapper}>
-            <YouTube
-              videoId={clase.youtube_id}
-            />
+            <YouTube videoId={clase.youtube_id} />
           </div>
-      </React.Fragment>
+      </Container>
     )
   }
 }
