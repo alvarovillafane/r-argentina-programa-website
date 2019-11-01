@@ -2,7 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
-import { Avatar, Box, Typography } from '@material-ui/core';
+import { Avatar, Typography } from '@material-ui/core';
 import logo from '../img/logo.jpg';
 
 const styles = theme => ({

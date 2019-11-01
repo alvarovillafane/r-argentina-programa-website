@@ -100,7 +100,7 @@ function Overview(props) {
 
         <p>Vamos a ver una técnica sencilla cuando hagamos esto en la parte práctica, y eso es escribir pseudocódigo. Pseudocódigo significa que no lo escribimos como el lenguaje coloquial de todos los días, si no de una manera que parezca código pero que no adhiera con la sintaxis del lenguaje en sí.</p>
 
-        <p>// si usuarioLogueado entonces:</p>
+        <p>{`// si usuarioLogueado entonces:`}</p>
 
         <p>Y acá hago un parate para profundizar en la sintaxis de un lenguaje de programación. La sintaxis, dicho de otra manera, es la forma o las reglas que uno tiene que seguir para que la máquina entienda lo que queremos decir. Las máquinas no tienen inteligencia como nosotros, por lo que no pueden interpretar nuestros errores. Es por eso que a veces van a ver que olvidarse un mínimo carácter hace que todo el programa deje de funcionar. Les voy a mostrar ejemplos en la práctica.
         </p>
