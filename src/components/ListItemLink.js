@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function ListItemLink(props) {
-  const { icon, primary, to } = props;
+  const { icon, primary, to, onClick } = props;
   const classes = useStyles();
 
   const renderLink = React.useMemo(
@@ -36,6 +36,7 @@ function ListItemLink(props) {
         exact={true} 
         to={to} 
         activeClassName={classes.active}
+        onClick={onClick}
       >
         {icon ? <ListItemIcon className={classes.icon}>{icon}</ListItemIcon> : null}
         <ListItemText className={classes.listItemText} primary={primary}/>

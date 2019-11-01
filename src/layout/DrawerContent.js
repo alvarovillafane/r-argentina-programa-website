@@ -63,11 +63,12 @@ function PoliceBadgeIcon() {
 }
 
 function DrawerContent(props) {
-  const { classes } =   props;
+  const { classes, onLinkClick } =   props;
   const [open, setOpen] = React.useState(true);
   const handleClick = () => {
     setOpen(!open);
   };
+
   const clasesDelCurso = data.clases;
   
   return (
@@ -77,7 +78,12 @@ function DrawerContent(props) {
       </div>
       <Divider />
       <List className={classes.list}>
-        <ListItemLink to="/" primary="Home" icon={<HomeOutlinedIcon/>} />
+        <ListItemLink 
+          to="/" 
+          primary="Home" 
+          onClick={onLinkClick} 
+          icon={<HomeOutlinedIcon/>} 
+        />
         <ListItem button onClick={handleClick}>
           <ListItemIcon>
             <SchoolOutlinedIcon className={classes.icon}/>
@@ -92,11 +98,12 @@ function DrawerContent(props) {
                   key={index} 
                   to={`/clase/${clase.id}`} 
                   primary={`Clase ${clase.id}`} 
+                  onClick={onLinkClick}
                 />
               )}
           </List>
         </Collapse>
-        <ListItemLink to="/codigo-de-conducta" primary="Código de conducta" icon={<PoliceBadgeIcon />} />
+        <ListItemLink onClick={onLinkClick} to="/codigo-de-conducta" primary="Código de conducta" icon={<PoliceBadgeIcon />} />
       </List>
     </div>
   );

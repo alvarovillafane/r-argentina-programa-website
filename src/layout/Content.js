@@ -66,7 +66,7 @@ function Content(props) {
               classes={{ paper: classes.drawerPaper, }}
               ModalProps={{ keepMounted: true, }}
             >
-              <DrawerContent />
+              <DrawerContent onLinkClick={handleDrawerToggle}/>
             </Drawer>
           </Hidden>
           <Hidden xsDown implementation="css">
