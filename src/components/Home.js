@@ -172,10 +172,9 @@ function Home(props) {
               href="https://www.twitch.tv/rargentinaprograma/">Twitch</a>, y 
               más tarde son subidos a <a target="_blank" rel="noopener noreferrer" 
               href="https://www.youtube.com/channel/UCXfQLgiBQPIzBp8-nRsG0KA">YouTube</a>. 
-              También podes obtener mas información visitando repositorio
+              También podes obtener mas información visitando el repositorio del curso
               en <a target="_blank" rel="noopener noreferrer" 
-              href="https://github.com/r-argentina-programa/introduccion-a-js">Github</a> del 
-              curso. 
+              href="https://github.com/r-argentina-programa/introduccion-a-js">Github</a>. 
             </p>
           </Paper>
         </Grid>
