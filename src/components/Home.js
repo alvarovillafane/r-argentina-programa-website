@@ -132,7 +132,7 @@ function Home(props) {
             component="h3" 
             className={classes.tituloInfo}
           >
-            ¿Para quien es el curso ?
+            ¿Para quién es el curso ?
           </Typography>
             <p>El curso esta especialmente diseñado para gente que nunca escribió una 
                 línea de código en su vida.
