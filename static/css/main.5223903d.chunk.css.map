@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,KACE,QACF,CAEA,QAGE,cACF,CAEA,GACE,iBACF","file":"main.5223903d.chunk.css","sourcesContent":["body {\n  margin: 0;\n}\n\np,\nul,\nol {\n  font-size: 1rem;\n}\n\nli {\n  margin-bottom: 8px;\n}\n"]}
