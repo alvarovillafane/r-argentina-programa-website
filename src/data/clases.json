@@ -1,4 +1,4 @@
-{"clases": [
+{ "clases": [
     {
         "id": "1",
         "titulo": "Clase 1: Introducción a la programación",
@@ -40,5 +40,15 @@
         "titulo": "Clase 7: Corrección tarea clase 6 e Introducción a validación de formularios + Unit Tests",
         "description": "description",
         "youtube_id": "da8Ekd47IOY"
+    },
+    {
+        "id": "8",
+        "titulo": "Clase 8: Corrección Tarea 7 + Regular Expression + Objetos",
+        "description": "description",
+        "youtube_id": "R4foJQCAZvQ"
+    }],
+    "proximaClase": {
+        "id": "9",
+        "fecha": null
     }
-]} 
+}
