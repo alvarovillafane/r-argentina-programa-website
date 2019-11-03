@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
   Route,
   Switch,
 } from 'react-router-dom'
@@ -61,7 +60,6 @@ function Content(props) {
   return (
     <div className={classes.root}>
       <Header onClick={handleDrawerToggle} />
-      <Router>      
         <nav className={classes.drawer}>
           <Hidden smUp implementation="css">
             <Drawer
@@ -93,7 +91,6 @@ function Content(props) {
               <Route component={NoMatch} />
             </Switch>
         </main>
-      </Router>
     </div>
   );
 }

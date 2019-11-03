@@ -85,7 +85,7 @@ function Overview(props) {
         <p>Una vez que hayamos visto JavaScript tanto para el frontend como el backend, HTML, CSS y MySQL, orquestado con Docker y junto con los conceptos de testing van a ser unos muy buenos juniors.</p>
 
 
-        <h2>Breve Introducción a programación</h2>
+        <Typography variant="h4" component="h1">Breve Introducción a programación</Typography>
 
         <p>Bueno ahora más o menos sabemos de qué vamos a hablar el resto del curso, empecemos un poco con qué es programar, para qué programamos, etc.</p>
 
@@ -105,7 +105,7 @@ function Overview(props) {
         <p>Y acá hago un parate para profundizar en la sintaxis de un lenguaje de programación. La sintaxis, dicho de otra manera, es la forma o las reglas que uno tiene que seguir para que la máquina entienda lo que queremos decir. Las máquinas no tienen inteligencia como nosotros, por lo que no pueden interpretar nuestros errores. Es por eso que a veces van a ver que olvidarse un mínimo carácter hace que todo el programa deje de funcionar. Les voy a mostrar ejemplos en la práctica.
         </p>
 
-        <h2>Práctica</h2>
+        <Typography variant="h5" component="h1">Práctica</Typography>
 
         <ul>
         <li>Vista básica de Slack</li>
