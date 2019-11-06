@@ -121,7 +121,7 @@ function Home(props) {
               <TwitchIcon />
             </IconButton>
             <p className={classes.twitchAyuda}>
-              Hace click en el icono para acceder a la clase en vivo.
+              Hacé click en el icono para acceder a la clase en vivo.
             </p>
         </Paper>
       </Grid>
@@ -134,13 +134,13 @@ function Home(props) {
           >
             ¿Para quién es el curso ?
           </Typography>
-            <p>El curso esta especialmente diseñado para gente que nunca escribió una 
+            <p>El curso está especialmente diseñado para gente que nunca escribió una 
                 línea de código en su vida.
             </p>
             <p>Los ejercicios que hay son de MusesCodeJS que es una meetup de 
               Australia principalmente para mujeres que quieren empezar a programar.
             </p>
-            <p>Para informacion ms detallada podes leer 
+            <p>Para información más detallada podés leer 
               el <Link to="/overview">overview</Link>.
             </p>
           </Paper>
@@ -152,7 +152,7 @@ function Home(props) {
               component="h3" 
               className={classes.tituloInfo}
             >
-              ¿Quién creo el curso?
+              ¿Quién creó el curso?
             </Typography>
             <p>
               Esta es una iniciativa 
@@ -168,11 +168,11 @@ function Home(props) {
               rel="noopener noreferrer" href={slackLink}>Slack</a>.
             </p>
             <p>
-              Los cursos en vivo los podes ver en <a target="_blank" rel="noopener noreferrer" 
+              Los cursos en vivo los podés ver en <a target="_blank" rel="noopener noreferrer" 
               href="https://www.twitch.tv/rargentinaprograma/">Twitch</a>, y 
               más tarde son subidos a <a target="_blank" rel="noopener noreferrer" 
               href="https://www.youtube.com/channel/UCXfQLgiBQPIzBp8-nRsG0KA">YouTube</a>. 
-              También podes obtener mas información visitando el repositorio del curso
+              También podés obtener más información visitando el repositorio del curso
               en <a target="_blank" rel="noopener noreferrer" 
               href="https://github.com/r-argentina-programa/introduccion-a-js">Github</a>. 
             </p>
