@@ -17,7 +17,7 @@ Outline general del curso https://docs.google.com/document/d/1D-7fi5afo_kgDFLi_n
 * Clonar el repositorio - git clone https://github.com/vmalvaro/r-argentina-programa-website.git
 * [Instalar Yarn](https://yarnpkg.com/lang/en/docs/install)
 * Ejecutar `yarn install` en el directorio donde el repo fue creado
-* Listo
+* Ejecutar `yarn start` en el directorio para iniciar el server
 
 ## TODO
 * Refactorizar el drawer/drawerContent
