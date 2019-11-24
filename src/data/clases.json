@@ -46,9 +46,15 @@
         "titulo": "Clase 8: Corrección Tarea 7 + Regular Expression + Objetos",
         "description": "description",
         "youtube_id": "R4foJQCAZvQ"
+    },
+    {
+        "id": "9",
+        "titulo": "Clase 9: Repaso de Git y Github (con GitHub Desktop)",
+        "description": "description",
+        "youtube_id": "QWeDBSHHPQI"
     }],
     "proximaClase": {
-        "id": "9",
+        "id": "10",
         "fecha": null
     }
 }
