@@ -52,9 +52,15 @@
         "titulo": "Clase 9: Repaso de Git y Github (con GitHub Desktop)",
         "description": "description",
         "youtube_id": "QWeDBSHHPQI"
+    },
+    {
+        "id": "10",
+        "titulo": "Clase 10: Juego 'simón dice', Bootstrap y NPM",
+        "description": "description",
+        "youtube_id": "sbUPqBh0KfA"
     }],
     "proximaClase": {
-        "id": "10",
+        "id": "11",
         "fecha": null
     }
 }
