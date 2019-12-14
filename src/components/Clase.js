@@ -35,7 +35,7 @@ const styles = theme => ({
   },
   slack: {
     '& p': {
-      marginTop: theme.spacing(1),
+      marginTop: theme.spacing(2),
     },
     '& a': {
       color: teal[900],
@@ -56,6 +56,9 @@ class Clase extends React.Component {
     return (
       <Container className={classes.root}>
         <Typography variant="h4" component="h1" className={classes.titulo}>{clase.titulo}</Typography>
+        <div className={classes.videoWrapper}>
+          <YouTube videoId={clase.youtube_id} />
+        </div>
         <div className={classes.slack}>
           <Typography>Slack channel: <a 
                 href={`https://rargentinaprograma.slack.com/archives/${clase.slack_channel}`}
@@ -63,9 +66,7 @@ class Clase extends React.Component {
                 target="_blank"
               >
                 #clase-{clase.id}
-              </a>
-          </Typography>
-          <Typography>¿No estás registrado en slack? <a 
+              </a>. ¿No estás registrado en slack? <a 
               href={slackLink} 
               rel="noopener noreferrer" 
               target="_blank"
@@ -73,9 +74,6 @@ class Clase extends React.Component {
              Hace click aca para unirte.
             </a>
           </Typography>
-        </div>
-        <div className={classes.videoWrapper}>
-          <YouTube videoId={clase.youtube_id} />
         </div>
       </Container>
     )
