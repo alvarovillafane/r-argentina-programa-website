@@ -50,16 +50,20 @@
     {
         "id": "9",
         "titulo": "Clase 9: Repaso de Git y Github (con GitHub Desktop)",
-        "description": "description",
         "youtube_id": "QWeDBSHHPQI",
         "slack_channel": "CQKRY6D53"
     },
     {
         "id": "10",
         "titulo": "Clase 10: Juego 'simón dice', Bootstrap y NPM",
-        "description": "description",
         "youtube_id": "sbUPqBh0KfA",
         "slack_channel": "CQKD29S9Z"
+    },
+    {
+        "id": "11",
+        "titulo": "Clase 11: Memotest + Cypress",
+        "youtube_id": "3PwEu0YJnX8",
+        "slack_channel": "CR58N07K2"
     }],
     "proximaClase": {
         "id": "11",
