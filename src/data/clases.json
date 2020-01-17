@@ -64,9 +64,15 @@
         "titulo": "Clase 11: Memotest + Cypress",
         "youtube_id": "3PwEu0YJnX8",
         "slack_channel": "CR58N07K2"
+    },
+    {
+        "id": "12",
+        "titulo": "Clase 12: Corrección Tarea 11 + jQuery + Promises + API",
+        "youtube_id": "lGZAkNLtTkE",
+        "slack_channel": "CRS624HRU"
     }],
     "proximaClase": {
-        "id": "12",
+        "id": "13",
         "fecha": null
     }
 }
