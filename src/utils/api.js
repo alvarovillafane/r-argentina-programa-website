@@ -2,6 +2,7 @@ import { useReducer, useEffect } from 'react';
 import clasesFetchReducer, {FETCH_INIT, FETCH_ERROR, FETCH_SUCCESS} from '../reducers/clasesFetchReducer';
 
 const KEY = process.env.YOUTUBE_APP_APIKey;
+console.log('key updated');
       
 const YOUTUBE_URL = 'https://www.googleapis.com/youtube/v3/';
 const CHANNEL_ID = 'UCXfQLgiBQPIzBp8-nRsG0KA';
