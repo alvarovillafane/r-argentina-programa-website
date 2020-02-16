@@ -2,10 +2,8 @@ import { useReducer, useEffect } from 'react';
 import clasesFetchReducer, {FETCH_INIT, FETCH_ERROR, FETCH_SUCCESS} from '../reducers/clasesFetchReducer';
 
 const KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
-console.log('*****test github actions****ll', process.env);
       
 const YOUTUBE_URL = 'https://www.googleapis.com/youtube/v3/';
-const CHANNEL_ID = 'UCXfQLgiBQPIzBp8-nRsG0KA';
 
 export function useFetchJavascriptClases () {
   const [state, dispatch] = useReducer(clasesFetchReducer, {

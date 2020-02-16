@@ -38,7 +38,7 @@ const ClaseCard = ({clase}) => {
     setOpen(false);
   };
 
-  const {id, videoId, title, thumbnail} = clase;
+  const {videoId, title, thumbnail} = clase;
   const ClaseDialogProps = {
     videoId,
     title,
