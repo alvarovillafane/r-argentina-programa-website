@@ -7,19 +7,19 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v1
 
-    - name: Build
-      run: |
-        npm install
-        npm run-script build
-      env:
-        YOUTUBE_APP_APIKey: ${{ secrets.YOUTUBE_APP_APIKey }}
+      - name: Build
+        run: |
+          npm install
+          npm run-script build
+        env:
+          YOUTUBE_APP_APIKey: ${{ secrets.YOUTUBE_APP_APIKey }}
 
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: public
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: public
