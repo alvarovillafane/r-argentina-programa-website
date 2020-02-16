@@ -1,10 +1,7 @@
 import { useReducer, useEffect } from 'react';
 import clasesFetchReducer, {FETCH_INIT, FETCH_ERROR, FETCH_SUCCESS} from '../reducers/clasesFetchReducer';
 
-/**** Nunca pero nunca commit de la api key. Esta es la peor practica ***/
-/**** Esta key esta restringida solo a argentinaprograma.com ***/
-/**** Solo estara publicada hasta que tenga mas tiempo en investigar .env variables para github pages ***/
-const KEY = 'AIzaSyBg-nJbFqrxa0IxUenQxf9CV0KCbYRKRhQ';
+const KEY = process.env.YOUTUBE_APP_APIKey;
       
 const YOUTUBE_URL = 'https://www.googleapis.com/youtube/v3/';
 const CHANNEL_ID = 'UCXfQLgiBQPIzBp8-nRsG0KA';
