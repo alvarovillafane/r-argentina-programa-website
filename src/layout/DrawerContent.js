@@ -75,16 +75,16 @@ function DrawerContent(props) {
           icon={<HomeOutlinedIcon/>} 
         />
         <ListItemLink 
-          to="/overview" 
-          primary="Overview" 
-          onClick={onLinkClick} 
-          icon={<ListAltIcon/>} 
-        />
-        <ListItemLink 
           to="/curso-javascript" 
           primary="Curso" 
           onClick={onLinkClick} 
           icon={<SchoolOutlinedIcon/>} 
+        />
+        <ListItemLink 
+          to="/overview" 
+          primary="Overview" 
+          onClick={onLinkClick} 
+          icon={<ListAltIcon/>} 
         />
         <ListItemLink onClick={onLinkClick} to="/codigo-de-conducta" primary="Código de conducta" icon={<PoliceBadgeIcon />} />
       </List>
