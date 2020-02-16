@@ -15,11 +15,12 @@ jobs:
           yarn 
           yarn build
         env:
-          YOUTUBE_APP_APIKey: ${{ secrets.REACT_APP_YOUTUBE_API_KEY }}
+          REACT_APP_YOUTUBE_API_KEY: ${{ secrets.REACT_APP_YOUTUBE_API_KEY }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REACT_APP_YOUTUBE_API_KEY: ${{ secrets.REACT_APP_YOUTUBE_API_KEY }}
           BRANCH: gh-pages
           FOLDER: build
