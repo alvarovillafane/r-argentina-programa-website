@@ -25,7 +25,7 @@ const Curso = () => {
   const {loading, clases, error} = useFetchJavascriptClases();
   const classes = useStyles();
 
-  if(true) {
+  if(error) {
     return (
       <Typography variant="h2" component="h1" className={classes.title}>
         Uh oh! hubo un error
