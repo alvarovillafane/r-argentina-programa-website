@@ -3,7 +3,7 @@ import clasesFetchReducer, {FETCH_INIT, FETCH_ERROR, FETCH_SUCCESS} from '../red
 
 const KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 console.log('*****test github actions****', process.env);
-console.log('*****test github actions****r', REACT_APP_YOUTUBE_API_KEY);
+console.log('*****test github actions****r', process.env.REACT_APP_YOUTUBE_API_KEY);
       
 const YOUTUBE_URL = 'https://www.googleapis.com/youtube/v3/';
 const CHANNEL_ID = 'UCXfQLgiBQPIzBp8-nRsG0KA';
