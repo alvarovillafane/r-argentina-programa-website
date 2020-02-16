@@ -7,8 +7,8 @@ import Header from './Header'
 import DrawerContent from './DrawerContent'
 import Home from '../components/Home'
 import Overview from '../components/Overview'
+import Curso from '../components/Curso'
 import CodigoDeConducta from '../components/CodigoDeConducta'
-import Clase from '../components/Clase'
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import { makeStyles } from '@material-ui/core/styles';
@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
   },
   drawer: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       flexShrink: 0,
       width: drawerWidth,
       zIndex: 0
@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   title: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       display: 'block',
       flexGrow: 1,
     }
@@ -61,7 +61,7 @@ function Content(props) {
     <div className={classes.root}>
       <Header onClick={handleDrawerToggle} />
         <nav className={classes.drawer}>
-          <Hidden smUp implementation="css">
+          <Hidden smDown implementation="css">
             <Drawer
               variant="temporary"
               open={mobileOpen}
@@ -72,7 +72,7 @@ function Content(props) {
               <DrawerContent onLinkClick={handleDrawerToggle}/>
             </Drawer>
           </Hidden>
-          <Hidden xsDown implementation="css">
+          <Hidden smDown implementation="css">
             <Drawer
               classes={{ paper: classes.drawerPaper }}
               variant="permanent"
@@ -86,8 +86,8 @@ function Content(props) {
             <Switch>
               <Route exact path='/' component={Home} />
               <Route path='/overview' component={Overview} />
+              <Route path='/curso-javascript' component={Curso} />
               <Route path='/codigo-de-conducta' component={CodigoDeConducta} />
-              <Route path="/clase/:clase" render={(props) => (<Clase key={props.match.params.clase} {...props} />)} />
               <Route component={NoMatch} />
             </Switch>
         </main>

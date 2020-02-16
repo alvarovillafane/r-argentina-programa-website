@@ -1,19 +1,12 @@
 import React from 'react';
 import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
 import ListItemLink from '../components/ListItemLink'
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import ExternalLinks from '../components/ExternalLinks'
-import Collapse from '@material-ui/core/Collapse';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
 import SchoolOutlinedIcon from '@material-ui/icons/SchoolOutlined';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import ListAltIcon from '@material-ui/icons/ListAlt';
 import SvgIcon from '@material-ui/core/SvgIcon';
-import data from '../data/clases.json';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
@@ -67,8 +60,6 @@ function DrawerContent(props) {
   const handleClick = () => {
     setOpen(!open);
   };
-
-  const clasesDelCurso = data.clases;
   
   return (
     <div>
@@ -89,25 +80,12 @@ function DrawerContent(props) {
           onClick={onLinkClick} 
           icon={<ListAltIcon/>} 
         />
-        <ListItem button onClick={handleClick}>
-          <ListItemIcon>
-            <SchoolOutlinedIcon className={classes.icon}/>
-          </ListItemIcon>
-          <ListItemText primary="Curso" />
-          {open ? <ExpandLess /> : <ExpandMore />}
-        </ListItem>
-        <Collapse in={open} timeout="auto" unmountOnExit>
-          <List className={classes.nested}>
-            {clasesDelCurso.map((clase, index) =>
-                <ListItemLink 
-                  key={index} 
-                  to={`/clase/${clase.id}`} 
-                  primary={`Clase ${clase.id}`} 
-                  onClick={onLinkClick}
-                />
-              )}
-          </List>
-        </Collapse>
+        <ListItemLink 
+          to="/curso-javascript" 
+          primary="Curso" 
+          onClick={onLinkClick} 
+          icon={<SchoolOutlinedIcon/>} 
+        />
         <ListItemLink onClick={onLinkClick} to="/codigo-de-conducta" primary="Código de conducta" icon={<PoliceBadgeIcon />} />
       </List>
     </div>

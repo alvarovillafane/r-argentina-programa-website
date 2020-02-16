@@ -1,5 +1,4 @@
 import React from 'react';
-import { TwitchIcon } from './ExternalLinks';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { 
   Avatar, 
@@ -12,7 +11,6 @@ import { blue, teal } from '@material-ui/core/colors';
 import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import logo from '../img/logo.jpg';
-import dataClases from '../data/clases.json';
 import slackData from '../data/slack.json';
 
 const styles = theme => ({
@@ -71,7 +69,12 @@ const styles = theme => ({
       '& svg': {
         width: '5em',
         height: '5em',
+      },
+      '&:hover': {
+        color: teal[500],
+        backgroundColor: 'inherit'
       }
+
     },
     primeraClase: { 
       fontSize: '2.5em'
@@ -80,13 +83,12 @@ const styles = theme => ({
 
 function Home(props) {
   const { classes } = props;
-  const { proximaClase } = dataClases;
   const slackLink = slackData.slack.link;
 
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item  md={8} >
+        <Grid item  md={12} >
           <Paper className={classes.paper}>
             <Avatar alt="Argentina Programa logo" 
               src={logo} 
@@ -99,31 +101,6 @@ function Home(props) {
               Este es un curso para aprender JavaScript desde 0, gratis y en español.
             </Typography>
           </Paper>
-      </Grid>
-      <Grid item xs={12} md={4}>
-        <Paper className={classes.paper}>
-          <Typography 
-            variant="h5" 
-            className={`${classes.proximaTitulo} ${classes.tituloInfo}`}
-          >
-            {`Clase #${proximaClase.id}`}
-          </Typography>
-          <p className={classes.fechaProximaClase}>
-            {proximaClase.fecha || 'hora y día a confirmar'}
-          </p>
-            <IconButton 
-              aria-label="twitch"
-              target="_blank" 
-              href="https://www.twitch.tv/rargentinaprograma/"
-              rel="noopener noreferrer"
-              className={classes.twitchLink}
-            >
-              <TwitchIcon />
-            </IconButton>
-            <p className={classes.twitchAyuda}>
-              Hace click en el icono para acceder a la clase en vivo.
-            </p>
-        </Paper>
       </Grid>
       <Grid item xs={12} md={6}>
         <Paper className={classes.paper}>
@@ -188,12 +165,12 @@ function Home(props) {
               ¿Por dónde empiezo?
             </Typography>
             <IconButton 
-                aria-label="Clase 1" 
+                aria-label="Curso" 
                 component={Link}
-                to="/clase/1"
+                to="/curso-javascript"
                 className={classes.flecha}
             > 
-              <span>Primera clase</span>
+              <span>Ver clases</span>
               <ArrowForwardIcon />
             </IconButton>
           </Paper>
