@@ -25,6 +25,14 @@ const Curso = () => {
   const {loading, clases, error} = useFetchJavascriptClases();
   const classes = useStyles();
 
+  if(true) {
+    return (
+      <Typography variant="h2" component="h1" className={classes.title}>
+        Uh oh! hubo un error
+      </Typography>
+    )
+  }
+
   return (
     <div className={classes.root}>
       <Typography variant="h2" component="h1" className={classes.title}>
