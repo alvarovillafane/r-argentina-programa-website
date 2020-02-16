@@ -15,7 +15,7 @@ jobs:
           yarn 
           yarn build
         env:
-          YOUTUBE_APP_APIKey: ${{ secrets.YOUTUBE_APP_APIKey }}
+          YOUTUBE_APP_APIKey: ${{ secrets.REACT_APP_YOUTUBE_API_KEY }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
