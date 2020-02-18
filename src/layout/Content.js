@@ -14,7 +14,7 @@ import Hidden from '@material-ui/core/Hidden';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 
-const drawerWidth = 240;
+const drawerWidth = 242;
 
 const useStyles = makeStyles(theme => ({
   root: {

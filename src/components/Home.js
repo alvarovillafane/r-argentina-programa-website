@@ -23,14 +23,17 @@ const styles = theme => ({
       textAlign: 'center',
       '& a': {
         color: teal[900],
-        fontWeight: 700
+        fontWeight: 700,
+        textDecoration: 'none'
       }
     },
     avatar: {
       display: 'inline-block',
-      height: 100,
+      height: 150,
       textAlign: 'center',
-      width: 100,
+      width: 150,
+      borderRadius: 0,
+      boxShadow: "0 12px 10px -10px #212529"
     },
     tituloBienvenida: {
       margin: '16px 0',
@@ -67,8 +70,8 @@ const styles = theme => ({
     flecha: {
       color: teal[900],
       '& svg': {
-        width: '5em',
-        height: '5em',
+        width: '4em',
+        height: '4em',
       },
       '&:hover': {
         color: teal[500],
@@ -95,14 +98,14 @@ function Home(props) {
               className={classes.avatar} 
             />
             <Typography variant="h4" component="h1" className={classes.tituloBienvenida}>
-              Bienvenido a r/argentina programa!
+              Hola! Te damos la bienvenida a r/argentina programa.
             </Typography>
             <Typography variant="h6" component="h2" className={classes.subtitulo}>
               Este es un curso para aprender JavaScript desde 0, gratis y en español.
             </Typography>
           </Paper>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12} md={4}>
         <Paper className={classes.paper}>
           <Typography 
             variant="h5" 
@@ -111,25 +114,25 @@ function Home(props) {
           >
             ¿Para quién es el curso ?
           </Typography>
-            <p>El curso esta especialmente diseñado para gente que nunca escribió una 
+            <p>El curso está especialmente diseñado para personas que nunca escribieron una 
                 línea de código en su vida.
             </p>
-            <p>Los ejercicios que hay son de MusesCodeJS que es una meetup de 
-              Australia principalmente para mujeres que quieren empezar a programar.
+            <p>Los primeros ejercicios que utilizamos son de MusesCodeJS, una meetup de 
+              Australia principalmente para mujeres que quieran empezar a programar.
             </p>
-            <p>Para informacion ms detallada podes leer 
+            <p>Para más informacion podes leer 
               el <Link to="/overview">overview</Link>.
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={4}>
           <Paper className={classes.paper}>
             <Typography 
               variant="h5" 
               component="h3" 
               className={classes.tituloInfo}
             >
-              ¿Quién creo el curso?
+              ¿Quién creó el curso?
             </Typography>
             <p>
               Esta es una iniciativa 
@@ -145,17 +148,17 @@ function Home(props) {
               rel="noopener noreferrer" href={slackLink}>Slack</a>.
             </p>
             <p>
-              Los cursos en vivo los podes ver en <a target="_blank" rel="noopener noreferrer" 
+              Los cursos en vivo los podés ver en <a target="_blank" rel="noopener noreferrer" 
               href="https://www.twitch.tv/rargentinaprograma/">Twitch</a>, y 
               más tarde son subidos a <a target="_blank" rel="noopener noreferrer" 
               href="https://www.youtube.com/channel/UCXfQLgiBQPIzBp8-nRsG0KA">YouTube</a>. 
-              También podes obtener mas información visitando el repositorio del curso
+              También podés obtener más información visitando el repositorio del curso
               en <a target="_blank" rel="noopener noreferrer" 
               href="https://github.com/r-argentina-programa/introduccion-a-js">Github</a>. 
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={12} className={classes.primeraClase}>
+        <Grid item xs={12} sm={4} className={classes.primeraClase}>
           <Paper className={classes.paper}>
             <Typography 
               variant="h5" 
