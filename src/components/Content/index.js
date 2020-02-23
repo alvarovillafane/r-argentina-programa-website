@@ -3,12 +3,12 @@ import {
   Route,
   Switch,
 } from 'react-router-dom'
-import Header from './Header'
-import DrawerContent from './DrawerContent'
-import Home from '../components/Home'
-import Overview from '../components/Overview'
-import Curso from '../components/Curso'
-import CodigoDeConducta from '../components/CodigoDeConducta'
+import Header from '../Header'
+import DrawerContent from '../DrawerContent'
+import Home from '../Home'
+import Overview from '../Overview'
+import Curso from '../Curso'
+import CodigoDeConducta from '../CodigoDeConducta'
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import { makeStyles } from '@material-ui/core/styles';

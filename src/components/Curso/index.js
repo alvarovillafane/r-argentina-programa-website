@@ -1,6 +1,6 @@
 import React from 'react';
-import { useFetchJavascriptClases } from '../utils/api';
-import ClaseCard from './ClaseCard';
+import { useFetchJavascriptClases } from '../../utils/api';
+import ClaseCard from '../ClaseCard';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';

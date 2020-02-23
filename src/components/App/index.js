@@ -2,9 +2,8 @@ import React  from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
-import Content from '../layout/Content'
-import ScrollToTop from '../utils/ScrollToTop';
-import theme from '../ui/theme';
+import Content from '../Content'
+import theme from '../../ui/theme';
 
 function App() {
   return (
@@ -12,7 +11,6 @@ function App() {
       <CssBaseline />
         <ThemeProvider theme={theme}>
           <Router>
-            <ScrollToTop />
             <Content />
           </Router>
         </ThemeProvider>
@@ -22,3 +20,4 @@ function App() {
 
 
 export default App;
+  

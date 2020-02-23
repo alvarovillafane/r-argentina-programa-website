@@ -10,8 +10,8 @@ import {
 import { blue, teal } from '@material-ui/core/colors';
 import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
-import logo from '../img/logo.jpg';
-import slackData from '../data/slack.json';
+import logo from '../../img/logo.jpg';
+import slackData from '../../data/slack.json';
 
 const styles = theme => ({
     root: {

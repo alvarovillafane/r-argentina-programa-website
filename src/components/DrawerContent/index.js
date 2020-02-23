@@ -1,8 +1,8 @@
 import React from 'react';
 import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
-import ListItemLink from '../components/ListItemLink'
-import ExternalLinks from '../components/ExternalLinks'
+import ListItemLink from '../ListItemLink'
+import ExternalLinks from '../ExternalLinks'
 import SchoolOutlinedIcon from '@material-ui/icons/SchoolOutlined';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import ListAltIcon from '@material-ui/icons/ListAlt';
@@ -56,10 +56,6 @@ function PoliceBadgeIcon() {
 
 function DrawerContent(props) {
   const { classes, onLinkClick } =   props;
-  const [open, setOpen] = React.useState(true);
-  const handleClick = () => {
-    setOpen(!open);
-  };
   
   return (
     <div>

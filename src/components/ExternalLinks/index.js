@@ -4,7 +4,7 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import RedditIcon from '@material-ui/icons/Reddit';
 import YouTubeIcon from '@material-ui/icons/YouTube';
-import slackData from '../data/slack.json';
+import slackData from '../../data/slack.json';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
