@@ -51,7 +51,7 @@ const Curso = ({ react = false }) => {
           </Typography>
         </>
       )}
-      {loading ? (
+      {loading || !clases ? (
         <div className={classes.circularProgress}>
           <CircularProgress size={68}/>
         </div>

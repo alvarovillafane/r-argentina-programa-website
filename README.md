@@ -20,8 +20,5 @@ Outline general del curso https://docs.google.com/document/d/1D-7fi5afo_kgDFLi_n
 * Ejecutar `yarn start` en el directorio para iniciar el server
 
 ## TODO
-* Agregar videos de react
 * Refactorizar el drawer/drawerContent
-* Cache para las api request
 * Agregar error boundary
-* Agregar .env variables

@@ -13,7 +13,6 @@ export default (state, action) => {
     case FETCH_SUCCESS:
       return {
         ...state,
-        clases: action.payload,
         loading: false,
         error: false
       }
