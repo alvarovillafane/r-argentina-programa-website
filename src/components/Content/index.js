@@ -86,7 +86,8 @@ function Content(props) {
             <Switch>
               <Route exact path='/' component={Home} />
               <Route path='/overview' component={Overview} />
-              <Route path='/curso-javascript' component={Curso} />
+              <Route path='/curso-javascript' render={() => <Curso />} />
+              <Route path='/clases-react' render={() => <Curso react />} />
               <Route path='/codigo-de-conducta' component={CodigoDeConducta} />
               <Route component={NoMatch} />
             </Switch>

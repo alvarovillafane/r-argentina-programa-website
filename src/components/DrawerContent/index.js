@@ -77,6 +77,12 @@ function DrawerContent(props) {
           icon={<SchoolOutlinedIcon/>} 
         />
         <ListItemLink 
+          to="/clases-react" 
+          primary="Clases de React" 
+          onClick={onLinkClick} 
+          icon={<SchoolOutlinedIcon/>} 
+        />
+        <ListItemLink 
           to="/overview" 
           primary="Overview" 
           onClick={onLinkClick} 
