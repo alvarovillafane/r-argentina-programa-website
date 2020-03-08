@@ -5,7 +5,11 @@ const KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
       
 const YOUTUBE_URL = 'https://www.googleapis.com/youtube/v3/';
 
-export function useFetchJavascriptClases () {
+const reactClasesPlaylistId = 'PLs73pLtDNXD_l2bEVFi1Yqph1f6pDvCnW';
+const javascriptClasesPlaylistId = 'PLs73pLtDNXD893LSF8fP-EfZbGWMECmnc';
+
+export function useFetchPlaylist (react = false) {
+  const playlistId = react ? reactClasesPlaylistId : javascriptClasesPlaylistId;
   const [state, dispatch] = useReducer(clasesFetchReducer, {
     loading: true,
     error: false,
@@ -17,7 +21,7 @@ export function useFetchJavascriptClases () {
       dispatch({ type: FETCH_INIT });
 
       try {
-        const response = await fetch(javascriptPlaylistUrl());
+        const response = await fetch(javascriptPlaylistUrl(playlistId));
         const responseJson = await response.json();
 
         dispatch({
@@ -29,8 +33,8 @@ export function useFetchJavascriptClases () {
       }
     };
 
-    fetchData();  
-  }, []);
+    fetchData();
+  }, [playlistId]);
 
   return state;
 }
@@ -46,8 +50,7 @@ function generateClases ({items}) {
   })
 }
 
-function javascriptPlaylistUrl() {
-  const playlistId = 'PLs73pLtDNXD893LSF8fP-EfZbGWMECmnc';
+function javascriptPlaylistUrl(playlistId) {
   const data = {
     part: 'snippet',
     maxResults: 25
